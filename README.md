@@ -14,7 +14,6 @@
 | Host     | localhost|
 | Port     | 8123     |
 | User     | default  |
-
 | Password |          |
 | Database | default  |
 
