@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pycharm data
+.idea/
+
+# Airflow logs
+!logs/.gitkeep

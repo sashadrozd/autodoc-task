@@ -1,0 +1,113 @@
+DataComPy Comparison
+--------------------
+
+DataFrame Summary
+-----------------
+
+  DataFrame  Columns   Rows
+0       df1        5  62020
+1       df2        5  62036
+
+Column Summary
+--------------
+
+Number of columns in common: 5
+Number of columns in df1 but not in df2: 0
+Number of columns in df2 but not in df1: 0
+
+Row Summary
+-----------
+
+Matched on: order_id
+Any duplicates on match values: Yes
+Absolute Tolerance: 0
+Relative Tolerance: 0
+Number of rows in common: 62,020
+Number of rows in df1 but not in df2: 0
+Number of rows in df2 but not in df1: 16
+
+Number of rows with some compared columns unequal: 12,376
+Number of rows with all compared columns equal: 49,644
+
+Column Comparison
+-----------------
+
+Number of columns compared with some values unequal: 4
+Number of columns compared with all values equal: 1
+Total number of values which compare unequal: 12,416
+
+Columns with Unequal Values or Types
+------------------------------------
+
+           Column df1 dtype df2 dtype  # Unequal      Max Diff  # Null Diff
+0    created_date    object    object         19  0.000000e+00            0
+3  order_conv_sum   float64   float64      12369  9.809445e+07            0
+2        quantity     int64     int64         12  2.300000e+01            0
+1       status_id   float64     int64         16  6.700000e+01            7
+
+Sample Rows with Unequal Values
+-------------------------------
+
+       order_id created_date (df1) created_date (df2)
+57855  40147366         2021-02-16         2021-04-08
+61116  30034387         2020-08-15         2020-05-15
+7555   57101492         2021-10-28         2021-10-17
+40912  28998047         2020-08-16         2020-06-12
+19982  49836202         2021-11-17         2021-09-03
+10034  61044052         2021-12-26         2021-09-19
+52170  28801455         2020-04-08         2020-04-17
+11851  12966584         2018-11-01         2018-10-31
+54077  27942062         2020-02-20         2020-04-09
+49392  50109084         2021-10-18         2021-08-17
+
+       order_id  status_id (df1)  status_id (df2)
+11794  22713601              NaN               14
+40912  28998047             14.0               81
+11798  46338219              NaN               14
+11800  15134426              NaN               14
+11799  39088049              NaN               81
+52271  39343169             14.0               81
+61116  30034387             81.0               14
+7555   57101492             65.0               14
+39431   1371338             81.0               14
+11796   2083518              NaN               14
+
+       order_id  quantity (df1)  quantity (df2)
+52271  39343169             2.0               1
+11276  55394132             1.0               6
+40912  28998047             2.0               4
+57855  40147366            24.0               2
+56620  28891203             2.0               1
+19982  49836202             1.0               0
+52170  28801455             6.0               4
+6255   57867349            14.0               2
+54077  27942062             2.0               5
+10034  61044052             1.0              24
+
+       order_id  order_conv_sum (df1)  order_conv_sum (df2)
+57362  41145343            417.462178            367.771638
+3156   50860373            321.754781            254.289560
+24060  42610785             98.466170          10916.358684
+33442  40575286             89.655769           1920.032730
+26515  36490177            153.141758          17914.094592
+47940    727862            199.909407          18436.703354
+16855  23299263             23.140466           2882.766392
+53033  23737373             73.129214           1515.888055
+27445  20202505             60.789855           7409.164800
+57416  12161583            152.496773           9149.885040
+
+Sample Rows Only in df2 (First 10 Columns)
+------------------------------------------
+
+       order_id created_date  status_id  quantity  order_conv_sum
+62023  61044052   2021-12-26         81         1           84.73
+62035  30034387   2020-08-15         81         2          164.52
+62021  57101492   2021-10-28         65         1          265.52
+62020  57867349   2021-10-05         14        14          317.89
+62030  28801455   2020-04-08         14         6          170.93
+62034  40147366   2021-02-16         14        24          908.35
+62024  55394132   2021-06-14         81         1          105.80
+62028  50109084   2021-10-18         14         3          262.14
+62031  39343169   2021-02-02         14         2          305.28
+62026   1371338   2015-08-13         81         1          214.90
+

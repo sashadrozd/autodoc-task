@@ -1,0 +1,113 @@
+DataComPy Comparison
+--------------------
+
+DataFrame Summary
+-----------------
+
+          DataFrame  Columns   Rows
+0  orders_generated        5  62020
+1   orders_original        5  62036
+
+Column Summary
+--------------
+
+Number of columns in common: 5
+Number of columns in orders_generated but not in orders_original: 0
+Number of columns in orders_original but not in orders_generated: 0
+
+Row Summary
+-----------
+
+Matched on: order_id
+Any duplicates on match values: Yes
+Absolute Tolerance: 0
+Relative Tolerance: 0
+Number of rows in common: 62,020
+Number of rows in orders_generated but not in orders_original: 0
+Number of rows in orders_original but not in orders_generated: 16
+
+Number of rows with some compared columns unequal: 12,376
+Number of rows with all compared columns equal: 49,644
+
+Column Comparison
+-----------------
+
+Number of columns compared with some values unequal: 4
+Number of columns compared with all values equal: 1
+Total number of values which compare unequal: 12,416
+
+Columns with Unequal Values or Types
+------------------------------------
+
+           Column orders_generated dtype orders_original dtype  # Unequal      Max Diff  # Null Diff
+0    created_date                 object                object         19  0.000000e+00            0
+3  order_conv_sum                float64               float64      12369  9.809445e+07            0
+2        quantity                  int64                 int64         12  2.300000e+01            0
+1       status_id                float64                 int64         16  6.700000e+01            7
+
+Sample Rows with Unequal Values
+-------------------------------
+
+       order_id created_date (orders_generated) created_date (orders_original)
+49553  43517038                      2021-07-31                     2021-06-27
+11276  55394132                      2021-06-14                     2021-05-07
+54077  27942062                      2020-02-20                     2020-04-09
+57855  40147366                      2021-02-16                     2021-04-08
+49392  50109084                      2021-10-18                     2021-08-17
+11831  23248387                      2019-10-23                     2019-10-22
+10034  61044052                      2021-12-26                     2021-09-19
+61116  30034387                      2020-08-15                     2020-05-15
+11811  20879445                      2019-11-05                     2019-11-06
+7555   57101492                      2021-10-28                     2021-10-17
+
+       order_id  status_id (orders_generated)  status_id (orders_original)
+49553  43517038                          81.0                           14
+11276  55394132                          81.0                           14
+52271  39343169                          14.0                           81
+40912  28998047                          14.0                           81
+6255   57867349                          14.0                           81
+61116  30034387                          81.0                           14
+11799  39088049                           NaN                           81
+11796   2083518                           NaN                           14
+11798  46338219                           NaN                           14
+11794  22713601                           NaN                           14
+
+       order_id  quantity (orders_generated)  quantity (orders_original)
+56620  28891203                          2.0                           1
+11276  55394132                          1.0                           6
+52271  39343169                          2.0                           1
+19982  49836202                          1.0                           0
+57855  40147366                         24.0                           2
+6255   57867349                         14.0                           2
+52170  28801455                          6.0                           4
+9247   51260186                          4.0                           2
+40912  28998047                          2.0                           4
+49553  43517038                          7.0                           1
+
+       order_id  order_conv_sum (orders_generated)  order_conv_sum (orders_original)
+31750   1486513                          44.448737                       2680.598844
+21600  42089306                          61.847252                       6796.079232
+29056  23353370                          91.015067                       9757.298980
+43590  12387030                          89.566723                      10445.321484
+30851  20349048                         165.852283                       3258.950232
+44200  16564149                          53.819109                       3244.951710
+15096  21241331                         322.402483                      39379.688004
+47605  29877464                         110.775490                       6682.158012
+34505  31600591                         435.830235                        529.946593
+3964   55818090                          62.875825                       6840.464928
+
+Sample Rows Only in orders_original (First 10 Columns)
+------------------------------------------------------
+
+       order_id created_date  status_id  quantity  order_conv_sum
+62022  51260186   2021-05-03         14         4          327.07
+62025  49836202   2021-11-17         14         1          182.40
+62035  30034387   2020-08-15         81         2          164.52
+62030  28801455   2020-04-08         14         6          170.93
+62020  57867349   2021-10-05         14        14          317.89
+62023  61044052   2021-12-26         81         1           84.73
+62024  55394132   2021-06-14         81         1          105.80
+62021  57101492   2021-10-28         65         1          265.52
+62028  50109084   2021-10-18         14         3          262.14
+62027  28998047   2020-08-16         14         2          353.03
+
