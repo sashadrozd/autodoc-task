@@ -16,7 +16,7 @@ default_args = {
     "depends_on_past": False,
     "catchup": False,
     "schedule_interval": timedelta(days=1),
-    "start_date": datetime(2022, 6, 13),
+    "start_date": datetime(2022, 6, 12),
 }
 
 
